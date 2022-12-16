@@ -11,7 +11,7 @@
   <h1>{{ props.msg }}</h1>
 
   <div class="card">
-    <el-button @click="store.changeCount">count is {{ store.count }}</el-button>
+    <el-button type="primary" @click="store.changeCount">count is {{ store.count }}</el-button>
     <p>
       Edit
       <code>src/layout/index.vue</code> to test HMR
