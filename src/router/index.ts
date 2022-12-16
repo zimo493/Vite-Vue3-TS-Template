@@ -16,6 +16,20 @@ const routes: Array<RouteRecordRaw> = [{
   meta: {
     title: "首页",
   },
+},{
+  path: "/401",
+  name: "401",
+  component: () => import("@/views/error/401.vue"),
+  meta: {
+    title: "401",
+  },
+}, {
+  path: "/404",
+  name: "404",
+  component: () => import("@/views/error/404.vue"),
+  meta: {
+    title: "404",
+  },
 }, {
   path: "/redirect/:path(.*)",
   name: "redirect",

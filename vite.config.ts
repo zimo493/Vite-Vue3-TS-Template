@@ -46,14 +46,14 @@ export default defineConfig(({ mode }) => {
       host: "0.0.0.0",
       port: 5370, // 端口号
       open: true, // 是否自动打开
-      proxy: {
+      /* proxy: {
         [VITE_APP_BASE_API]: {
           target: "http://localhost:8080",
           ws: true,
           changeOrigin: true,
           rewrite: path => path.replace(new RegExp('^' + VITE_APP_BASE_API), '')
         },
-      },
+      }, */
     },
   }
 })
