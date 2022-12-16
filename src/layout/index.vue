@@ -11,7 +11,7 @@
   <h1>{{ props.msg }}</h1>
 
   <div class="card">
-    <el-button type="primary" @click="store.changeCount">count is {{ store.count }}</el-button>
+    <el-button type="primary" @click="store.changeCount">count is {{ count }}</el-button>
     <p>
       Edit
       <code>src/layout/index.vue</code> to test HMR
@@ -32,6 +32,7 @@
 </template>
 <script setup lang="ts">
 import { countStore } from "@/store/modules/count";
+import { storeToRefs } from "pinia";
 const store = countStore()
 const props = withDefaults(defineProps<{
   msg?: string
@@ -39,7 +40,8 @@ const props = withDefaults(defineProps<{
   msg: 'Vite + Vue3 + TS'
 })
 
-const count = ref(0)
+/* 页面中使用pinia响应式数据 */
+const { count } = storeToRefs(store);
 </script>
 
 <style scoped lang="less">
