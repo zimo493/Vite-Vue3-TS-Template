@@ -1,7 +1,7 @@
-/* demo */
+/* example */
 import {defineStore} from "pinia";
 
-export const countStore = defineStore('demo', {
+export const exampleStore = defineStore('example', {
   state: (): { count: number } => {
     return {
       count: 1

@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Layout from "@/layout/index.vue"
 /** 
- * path: "/login",                  // 路由地址
- * name: "Login",                   // 设定路由的名字
+ * path: "/user",                   // 路由地址
+ * name: "User",                    // 设定路由的名字
  * component:                       // 组件路径
- * meta: { 
- *    title: "登录",                // 设置该路由在页签和面包屑中展示的名字
+ * meta: {                          // 路由原元信息
+ *    title: "用户列表",             // 设置该路由在页签和面包屑中展示的名字
  *    activeMenu: '/user/list'      // 当路由设置了该属性，则会高亮相对应的侧边栏
  * }
  */
@@ -13,30 +13,22 @@ const routes: Array<RouteRecordRaw> = [{
   path: "/",
   name: "Index",
   component: Layout,
-  meta: {
-    title: "首页",
-  },
-},{
+  meta: { title: "首页", },
+}, {
   path: "/401",
   name: "401",
   component: () => import("@/views/error/401.vue"),
-  meta: {
-    title: "401",
-  },
+  meta: { title: "401", },
 }, {
   path: "/404",
   name: "404",
   component: () => import("@/views/error/404.vue"),
-  meta: {
-    title: "404",
-  },
+  meta: { title: "404", },
 }, {
   path: "/redirect/:path(.*)",
   name: "redirect",
   component: () => import("@/views/redirect/index.vue"),
-  meta: {
-    title: "刷新中 ...",
-  },
+  meta: { title: "刷新中...", },
 }
   /* {
   path: "",
@@ -51,27 +43,6 @@ const routes: Array<RouteRecordRaw> = [{
       title: "首页",
     },
   }]
-}, {
-  path: "/login",
-  name: "Login",
-  component: () => import("@/views/login.vue"),
-  meta: {
-    title: "登录",
-  },
-}, {
-  path: "/401",
-  name: "401",
-  component: () => import("@/views/error/401.vue"),
-  meta: {
-    title: "401",
-  },
-}, {
-  path: "/redirect/:path(.*)",
-  name: "redirect",
-  component: () => import("@/views/redirect/index.vue"),
-  meta: {
-    title: "刷新中...",
-  },
 } */]
 
 // 解决Vue-Router升级导致的Uncaught(in promise) navigation guard问题

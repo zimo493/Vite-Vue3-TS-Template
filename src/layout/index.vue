@@ -31,13 +31,13 @@
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 <script setup lang="ts">
-import { countStore } from "@/store/modules/count";
+import { exampleStore } from "@/store/modules/example";
 import { storeToRefs } from "pinia";
-const store = countStore()
+const store = exampleStore()
 const props = withDefaults(defineProps<{
   msg?: string
 }>(), {
-  msg: 'Vite + Vue3 + TS'
+  msg: 'Vite + Vue3 + TypeScript'
 })
 
 /* 页面中使用pinia响应式数据 */
