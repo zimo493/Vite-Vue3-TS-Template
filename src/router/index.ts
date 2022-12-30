@@ -61,11 +61,7 @@ const router = createRouter({
   // 刷新时，滚动条位置还原
   //scrollBehavior: () => ({ left: 0, top: 0 }),
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
-    } else {
-      return { top: 0 };
-    }
+    return savedPosition ? savedPosition : { top: 0 };
   },
 });
 

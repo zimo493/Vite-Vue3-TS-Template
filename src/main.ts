@@ -23,6 +23,10 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component);
 }
 
+/* 全局组件 */
+import pagination from "./components/Pagination/index.vue"; /* 分页组件 */
+app.component("pagination", pagination);
+
 app.use(pinia).use(router).mount('#app');
 
 console.log('%c我们要迈向未来,而不是沉湎于过去.🌞\nWe are going forward to the future, not back into the past.🎈', "color:#409eff;");
