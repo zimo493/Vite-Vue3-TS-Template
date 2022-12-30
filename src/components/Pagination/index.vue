@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 const props = withDefaults(defineProps<{
-  total: number,          // 总条目数 (必须)
+  total: number,          // 总条目数
   currentPage: number,    // 当前页数
   pageSize: number,       // 每页显示条目个数
   pageSizes?: number[],   // 每页显示个数选择器的选项设置
